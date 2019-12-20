@@ -1,0 +1,38 @@
+#folders & files explanation
+var/ contains files uploaded by the clients
+Now in gnl/:
+	api/ contains functions that will be called by front-end
+	js/ contains front-end code, useful ones include app, routes, main, multibasic, association_rule, functional_dependency, label, selection
+	the data in static/ is used to manipulate temporary data in api functions. Th js/ in static/ is jquery to render the data for histogram, correlation, and coverage
+	template/ contains the html templates, useful ones are index and label
+	In view/ are index interface code. the helper.py are convenience functions. CoverageJava/ contains the Java code for discovering maximal uncovered patterns, and will be used for get_coverage function in api/. The aprori and fd/ are algorithms used for functional_dependency and association_rule in api/.
+	config.py includes global variables used in api/ and view/
+bin/ contains convenience bash script
+
+#run & deploy (try sudo if some of them don't work)
+sudo apt-get install python3-venv
+cd project_repo_dir_name/
+python3 -m venv env
+source env/bin/activate
+pip install --upgrade pip setuptools wheel
+pip install -e .
+pip install nodeenv
+nodeenv --python-virtualenv
+source env/bin/activate # again, after installing node
+npm install .
+node_modules/.bin/webpack
+optional (chmod +x bin/*) 
+python
+nltk.download('stopwords')
+ctrl+z
+source env/bin/activate
+follow https://jpype.readthedocs.io/en/latest/
+./bin/local_run
+
+#server run
+For deploy follow aws.pdf
+
+#process explanation
+The user enters index.py and renders index.html, and uploads a dataset. The index.py then receives the dataset, process it, and render label.html, entering React
+The user first enters selection.jsx, makes selection and then the form is submitted through form_submit() in likes.py from api/. 
+Then the user enters label.jsx, and generate labels based upon selections (mostly by calling functions in likes.py).

@@ -1,0 +1,12 @@
+#!/bin/bash
+# gnl_test
+
+
+#if [ ! -e var/gnl.sqlite3 ] ; then
+#	./bin/gnl_db create
+#fi
+./node_modules/.bin/webpack
+export FLASK_DEBUG=True
+export FLASK_APP=gnl
+export GNL_SETTINGS=config.py
+flask run --host 0.0.0.0 --port 8000

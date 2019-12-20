@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Upload</title>
+  <link rel="shortcut icon" type="image/png" href="../static/img/NL.png"/>
+
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/css/front_pages_style_2.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+
+  <!-- <link rel="stylesheet" type="text/css" href="front_pages_style.css"> -->
+  <!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+  <form action="" method="POST" enctype="multipart/form-data">
+    <div class="scontainer"></div>
+    <div class="container">
+      <img style="width:100%;" src="../static/img/new_logo.png">
+      <div class="temp">
+        <h1>MithraLabel: Flexible Nutritional Labels<h1>
+      </div>
+      <div style="size:12pt;color:red">Please use Chrome or Opera for the system for now as some other browsers will report
+        errors</div>
+      <hr>
+      <div class="stitle">
+        Upload your dataset
+      </div>
+      <div style="display: inline-block;">
+        <label for="file-upload" class="custom-file-upload">
+          <i class="fa fa-cloud-upload"></i> Select .csv file &nbsp;
+          <!--  <span ><input type="checkbox" name="owner" value="owner" > I am the original owner of the dataset </span>-->
+        </label>
+        <input id="file-upload" name='filee' type="file" style="display:none;">
+      </div>&nbsp;&nbsp;&nbsp;&nbsp;
+      <div style="display: inline-block;"><button type="submit" name="submit" class="registerbtn">Upload</button></div>
+
+      <br></br>
+
+      <div class="stitle">Choose a sample dataset</div>
+      <div class="optional_datasets" style="display: inline-block;">
+        <select name='sel'>
+          <option selected="selected" value="RecidivismData_Original.csv">RecidivismData_Original.csv</option>
+          <option label="Boston.csv" value="Boston.csv">Boston.csv</option>
+          <option label="salary.csv" value="salary.csv">salary.csv</option>
+          <option label="Auto.csv" value="Auto.csv">Auto.csv</option>
+          <option label="UBSprices.csv" value="UBSprices.csv">UBSprices.csv</option>
+          <option label="penn.csv" value="penn.csv">penn.csv</option>
+        </select>
+        <input type="submit" style="display:none;">
+      </div>&nbsp;&nbsp;&nbsp;&nbsp;
+      <div style="display: inline-block;"><button type="submit" name="submit2" class="registerbtn">Confirm</button></div>
+      <!-- <div style="display: inline-block;">
+          <button>Select</button>
+        </div> -->
+      <br></br>
+      <div class="stitle">
+        Specify a task
+      </div>
+      <div>
+        <input class="form-radio" type="radio" name="task" value="classification" />Classification&nbsp;&nbsp;&nbsp;
+        <input class="form-radio" type="radio" name="task" value="ranking" checked />Ranking&nbsp;&nbsp;&nbsp;
+        <input class="form-radio" type="radio" name="task" value="clustering" />Clustering&nbsp;&nbsp;&nbsp;
+        <input class="form-radio" type="radio" name="task" value="prediction" />Prediction&nbsp;&nbsp;&nbsp;
+        <!-- <label>
+          <input class="form-radio" type="radio" name="task" value="classification" />
+          <span class="checkbox-label">Classification</span>
+        </label>
+        <label class="container">
+          <input class="form-radio" type="radio" name="task" value="ranking" />
+          <span class="checkbox-label">Ranking</span>
+        </label> -->
+        <!-- <button class="span_tag">Classification</button>&nbsp;
+        <span class="span_tag1">Ranking</span>&nbsp;
+        <span class="span_tag">Clustering</span>&nbsp;
+        <span class="span_tag">Prediction</span>&nbsp;
+        <span class="span_tag">Selection and labeling</span>&nbsp; -->
+        <!-- <button class="proceed"><input type="submit" name="submit" value=" Next: Manual Information &#x2192;"/></span>&nbsp; -->
+      </div>
+
+      <br>
+      <br>
+
+
+
+      <!-- <button type="submit" name="submit" class="registerbtn">Next: Manual Information</button> -->
+    </div>
+
+    <div class="scontainer"></div>
+
+
+  </form>
+  <script>
+    $('#file-upload').change(function () {
+      var i = $(this).prev('label').clone();
+      var file = $('#file-upload')[0].files[0].name;
+      $(this).prev('label').text(file);
+    });
+  </script>
+</body>
+
+</html>

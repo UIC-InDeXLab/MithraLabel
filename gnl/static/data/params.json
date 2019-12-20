@@ -1,0 +1,26 @@
+{
+    "Functional Dependencies": {
+        "classification": 4.25,
+        "clustering": 1.0,
+        "ranking": 6.583333333333333,
+        "prediction": 4
+    },
+    "Correlations": {
+        "classification": 5.25,
+        "clustering": 1.0,
+        "ranking": 5.75,
+        "prediction": 5
+    },
+    "Maximal Uncovered Patterns": {
+        "classification": 10.25,
+        "clustering": 5,
+        "ranking": 11.083333333333332,
+        "prediction": 6
+    },
+    "Association Rules": {
+        "classification": 3.25,
+        "clustering": 0.5,
+        "ranking": 6.583333333333333,
+        "prediction": 4
+    }
+}

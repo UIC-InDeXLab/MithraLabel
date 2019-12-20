@@ -1,0 +1,2 @@
+name,first_name,last_name,sex,date_of_birth,age,race,juv_fel_count,decile_score,juv_misd_count,juv_other_count,priors_count,days_b_screening_arrest,c_days_from_compas,c_charge_degree,is_recid,is_violent_recid,v_decile_score,priors_count_1,start,end,event,two_year_recid,Violence_score,Recidivism_score,marriage_status
+str,str,str,str,str,int,str,int,int,int,int,int,float,float,str,int,int,int,int,int,int,int,int,float,float,str
